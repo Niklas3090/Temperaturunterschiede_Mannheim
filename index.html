@@ -24,13 +24,13 @@
 </head>
 <body>
 
-<p style="text-align: right;">
-    <img src="Dashboard.jpeg" alt="Dashboard">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Dashboard.jpeg" style=" display: block; margin-bottom: 2px;">
     <em>Dashboard</em>
 </p>
 
-<p> 
-    Niklas <br>
+<p style="display: block; margin-bottom: -20px; margin-top: 40px; color: grey">
+    Niklas Rechenbach
 </p>
 
 <h1>Temperaturunterschiede in Mannheim</h1>
@@ -39,8 +39,7 @@
 <p>
     Mannheim - die Stadt mit den heißesten Temperaturen Deutschlands. In diesem Projekt wird untersucht, ob es mit zunehmender Entfernung zur Innenstadt Mannheims kühler wird. Mithilfe des Stadtklimanetzes Mannheims möchte ich herausfinden, ob und wie sich die Temperaturen mit zunehmender Entfernung zur Innenstadt in den einzelnen Stadtbezirken unterscheiden.
 </p>
-
-<br><br>
+<br>
 
 <h2>Einführung/ Konzept</h2>
 
@@ -49,16 +48,14 @@
 <p>
     Im Rahmen der Vorlesung „Grundlagen der Datenvisualisierung“ an der Hochschule Mannheim, hatte jede Gruppe die Aufgabe, mit Klimadaten der Stadt Mannheim ein Projekt mit entsprechender Visualisierung zu erstellen. Durch eine vorher selbst ausgewählte These sollte mit Hilfe verschiedener Visualisierungstechniken eine angemessene und aussagekräftige Visualisierung erstellt werden. 
 </p>
-
-<br><br>
+<br>
 
 <h3>Konzept</h3>
 
 <p>
     Innerhalb meines Projektes wollte ich feststellen, ob die Temperatur in Mannheim mit zunehmender Entfernung zur Innenstadt immer kühler wird. Ebenfalls wollte ich herausfinden, wie sich die Temperatur im Verlauf eines Tages verhält. Gibt es Unterschiede zwischen Tag und Nacht? Anhand des Messnetzes von sMArt Mannheim, konnte ich dieser Frage genauer auf den Grund gehen.
 </p>
-
-<br><br>
+<br>
 
 <h2>Daten</h2>
 
@@ -75,34 +72,29 @@
     Mit diesen seriösen Quellen hatte ich Zugriff auf alle Daten der verschiedenen Wetterstationen ab dem 20.02.2024. Diese Datensätze beinhalten wichtige Daten, wie beispielsweise die geographischen Koordinaten der einzelnen Messstationen, Messzeitpunkte, Temperatur, Luftfeuchtigkeit etc. Jeder Tag wird in einer eigenen zip-Datei veröffentlicht. In dieser zip-Datei wird für jeden Sensor jeweils eine csv-Datei erstellt, die alle Messwerte und Uhrzeiten beinhaltet. Mithilfe des Jupyter Notebooks in Abbildung 1, konnte ich die einzelnen csv-Dateien der Sensoren pro Tag in einer großen csv-Datei zusammenfassen.
 </p>
 
-<p style="text-align: center;">
-    <img src="Notebook.png"alt="Abbildung 1:">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Notebook.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 1: Jupyter Notebook</em>
-<br>    
-<br>  
-<br>  
-</p>
+</p>  
+
+<p>
     Durch das Programm Tableau konnten die verschiedenen Datenquellen miteinander verknüpft werden. Mit Tableau verschaffte ich mir erstmalig einen Überblick der verschiedenen Standorte aller Wettermessstationen, indem ich sie mir auf einer Karte anzeigen ließ (siehe Abbildung 2). Durch das Filtern der Messwerte gelang es mir, die Temperaturunterschiede der verschiedenen Uhrzeiten über einen Tag verteilt auf der Karte darzustellen. Um die eventuell auftretenden Temperaturunterschiede bei zunehmender Entfernung zur Innenstadt zu sehen, bildete ich für jeden Stadtbezirk eine Sensorgruppe aus jeweils drei Sensoren. Aufgrund von teilweise auftretenden Messfehlern entschied ich mich für nur drei Sensoren pro Stadtbezirk. Bei diesen Messfehlern wurde immer eine maximale Temperatur von -999°c angezeigt, was bei der Berechnung des Durchschnitts zu Problemen führte. Ich habe mich bewusst für den Durchschnitt und gegen den Median entschieden, da ich genauere Daten verwenden wollte. Um meine These untersuchen zu können, habe ich auf der Karte eine Linie durch die betroffenen Stadtbezirke gezogen, welche ebenfalls durch die einzelnen Sensorgruppen verläuft (siehe Abbildung U).
     Für jede Sensorgruppen berechnete ich mithilfe von Tableau den Durchschnitt der maximalen Temperaturen zu jeder vollen Stunde. In den Testphasen meiner Visualisierung habe ich mit dem 20.03.2024 experimentiert. Hierbei stellte sich heraus, dass die Werte sehr aussagekräftig sind, weshalb ich mich entschied dieses Datum final zu wählen.
 </p>
 
-<br><br>
-
-<p style="text-align: center;">
-    <img src="Abbildung 2.png"
-         alt="Abbildung 2">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung2.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 2</em>
 </p>
 
-<br><br>
+<br>
 
-<p style="text-align: center;">
-    <img src="Abbildung3.png"
-         alt="Abbildung 3">
+<p style="text-align: center; color: grey;">
+    <img src="bilder/Abbildung3.png" style=" display: block; margin: 0 auto; margin-bottom: 2px; height: auto; width: 350px;">
     <em>Abbildung 3</em>
 </p>
 
-<br><br>
+<br>
 
 <h2>Prototyp/ Ergebnisse</h2>
 
@@ -110,21 +102,19 @@
     Bei meinem ersten Prototyp stellte ich in Tableau die durchschnittliche Maximaltemperatur der einzelnen Stadtbezirke in Form eines Balkendiagramms dar (siehe Abbildung Y). Hierbei war die Achsenbeschriftung zu unübersichtlich und es konnten nur alle Stadtbezirke auf der X-Achse angezeigt werden, indem das Diagramm vergrößert wurde. Dies hätte jedoch zur Folge gehabt, dass eine Gesamtübersicht über den Verlauf eines Tages nicht mehr möglich gewesen wäre, da hierfür nach links bzw. rechts gescrollt werden müsste. Aufgrund dessen entschied ich mich für ein Liniendiagramm, welches den Temperaturverlauf der verschiedenen Stadtbezirke über einen Tag verteilt darstellt (siehe Abbildung 5). 
 </p>
 
-<p style="text-align: center;">
-    <img src="Abbildung4.png"
-         alt="Abbildung 4: Prototyp Balkendiagramm">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung4.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 4: Prototyp Balkendiagramm</em>
 </p>
 
 <br><br>
 
-<p style="text-align: center;">
-    <img src="Abbildung 5.png"
-         alt="Abbildung 5: Prototyp Liniendiagramm">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung 5.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 5: Prototyp Liniendiagramm</em>
 </p>
 
-<br><br>
+<br>
 
 <h2>Visualisierung</h2>
 
@@ -132,15 +122,15 @@
     Um die Temperaturdifferenz mit Hinblick auf den Zeitlichen Verlauf über einen Tag bestmöglich darzustellen, wurde wie bereits erwähnt, ein Liniendiagramm (siehe Abbildung S) gewählt. Ein Liniendiagramm eignet sich hier besonders gut, da es die angemessenste Visualisierung für einen kontinuierlichen Zeitverlauf darstellt und die These am besten verdeutlicht. Um das Diagramm einfach und überschaubar darzustellen, entschied ich mich für ein kontinuierliches Farbschema. Der Stadtbezirk mit den höchsten maximalen Temperaturen, wird in dem Farbverlauf mit der dunkelsten Farbe dargestellt. Je niedriger die maximale Temperatur der Stadtbezirke ist, desto heller ist auch die Farbe des Stadtbezirks. Um den räumlichen Temperaturverlauf mit zunehmender Entfernung zu Innenstadt zu verdeutlichen, wurde das Liniendiagramm mit der geografischen Karte im Dashboard verknüpft (siehe Video 1). Durch das Ändern der Uhrzeit im Filter kann somit genau gezeigt werden, wo und wann welche maximalen Temperaturen anliegen.
 </p>    
 
-<div style="text-align: center;">
+<div style="text-align: right; color: grey;">
     <video width=100%; height= auto controls>
-        <source src="aufnahme-dashboard-kopie_2wWo89PU.mp4" type="video/quicktime">
+        <source src="videos/Dashboard-Aufnahme.mov" type="video/quicktime;">
     </video>
     <br>
     <em>Video 1: Dashboard</em>
 </div>
 
-<br><br>
+<br>
 
 <h2>Implementierung</h2>
 
@@ -148,12 +138,12 @@
     Wie bereits erwähnt, wurde die Visualisierung ausschließlich mit Tableau erstellt. Da wir während des Semesters schon viel mit Tableau arbeiteten und ich dort schon Erfahrungen mit dem Programm sammelte, war dies für mich das naheliegendste Programm bei der Programmauswahl. Um erstmalig Daten visualisieren zu können, mussten zu Beginn Änderungen in der Excel-Tabelle des Metadatenkatalogs vorgenommen werden. Es musste eine zusätzliche Spalte hinzugefügt werden, die den Namen Sensor-ID trägt. In dieser Spalte musste die Messnetznummer und die Stations-ID zusammengefügt werden. Dadurch kann die csv-Datei des 20.03.2024 über die Sations-ID mit der Excel-Tabelle verknüpft werden. Zusätzlich gibt es noch einen Fehler in der Excel-Tabelle bei den Spalten Längen- und Breitengrad. Der Wert der Spalteninhalte muss jeweils durch die Zahl 1000000 dividiert werden, damit die Sensoren am richtigen geographischen Ort angezeigt werden. Mit diesen Änderungen kann anschließend die Excel-Tabelle mit den zuvor zusammengefassten Daten des Jupyter Notebooks verknüpft werden. Anschließend werden einzelne Gruppen für die verschiedenen Stadtbezirke erstellt. Für jeden Stadtbezirk berechnete ich über Tableau den Durchschnitt der maximalen Temperatur zur vollen Stunde und erstellte daraus jeweils ein Liniendiagramm pro Blatt für jeden Stadtbezirk. Aus jedem Liniendiagramm kann dann pro Stadtteil eine eigene csv-Dateien erstellt werden, die die Daten der Sensor-ID’s, der maximalen Durchschnittstemperaturen und der Timestamps beinhaltet. Diese einzelnen csv-Dateien konnten über die Timestamps mit der csv-Datei des 20.03.2024 verknüpft werden, welche alle Daten des Tages beinhaltet. Zur Veranschaulichung ist diese Verknüpfung nochmals in der Abbildung 6 zu sehen. Durch diese einzeln erstellten Datensätze ist es möglich, alle vier Stadtbezirke zusammen in einem Liniendiagramm darzustellen.
 </p>
 
-<p style="text-align: center;">
-    <img src="Abbildung6.png">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung6.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 6: Datenverknüpfung</em>
 </p>
 
-<br><br>
+<br>
 
 <h2>Erkenntnisse</h2>
 
@@ -165,32 +155,30 @@
     Ab 15Uhr nimmt die Temperatur dann in allen Stadteilen wieder langsam ab. Die Temperaturdifferenz der einzelnen Stadtbezirke vergrößert sich stündlich. Die Abkühlung in Waldhof und vor allem in der Gartenstadt verläuft schneller als in der Innen- und Neckarstadt.
     Um 21Uhr ist eine Temperaturdifferenz von 5,5°C zwischen Innen- und Gartenstadt messbar (siehe Abbildung 9). Auch hier bestätigt sich wieder, dass die Temperatur mit zunehmender Entfernung zur Innenstadt kühler wird. 
     Zusammenfassend lässt sich sagen, dass die Temperaturverläufe in den verschiedenen Stadtbezirken Mannheims deutliche Unterschiede aufweisen, die auf die städtebaulichen und geografischen Besonderheiten hinweisen. Mit zunehmender Entfernung zur Innenstadt nehmen die Temperaturen ab, was auf eine dichtere Bebauung und weniger Grünflächen in der Innenstadt zurückzuführen ist. Im Gegensatz dazu ist in Waldhof und der Gartenstadt aufgrund der höheren Anzahl an Grünflächen und einer geringeren Bebauung eine geringere Temperatur vorzufinden. Zwischen 17Uhr und 6Uhr sind die Temperaturunterschiede am deutlichsten. Tagsüber hingegen ist nur ein wesentlich geringerer Temperaturunterschied vorzufinden.
-
-
 </p>
 
-<br><br>
+<br>
 
-<p style="text-align: center;">
-    <img src="Abbildung 7.png">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung 7.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 7</em>
 </p>
 
-<br><br>
+<br>
 
-<p style="text-align: center;">
-    <img src="Abbildung 8.png">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung 8.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 8</em>
 </p>
 
 <br><br>
 
-<p style="text-align: center;">
-    <img src="Abbildung 9.png">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Abbildung 9.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 9</em>
 </p>
 
-<br><br>
+<br>
 
 <h2>Fazit</h2>
 
@@ -203,7 +191,7 @@
 
 </p>
 
-<br><br>
+<br>
 
 <h3>Ausblick</h3>
 
@@ -213,19 +201,21 @@
 
 </p>
 
-<p style="text-align: center;">
-    <img src="Skizze.png">
+<p style="text-align: right; color: grey;">
+    <img src="bilder/Skizze.png" style=" display: block; margin-bottom: 2px;">
     <em>Abbildung 10: Skizze</em>
 </p>
 
-<br><br>
+<br>
 
-<p style="text-align: center;">
-    <img src="Idee.png">
+<p style="text-align: center; color: grey;">
+    <img src="bilder/Idee.png" style=" display: block; margin: 0 auto; margin-bottom: 2px; height: auto; width: 350px;">
     <em>Abbildung 11: Idee</em>
 </p>
 
-<br><br>
+<br>
 
 </body>
 </html>
+
+
